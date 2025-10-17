@@ -617,10 +617,11 @@ a {
     width: 28px;
     height: 28px;
     border-radius: 4px;
+    background: #f9f9f9;
 }
 
 .footer .social-link:hover {
-    background: #f9f9f9;
+    background: #ebebeb;
 }
 
 .footer .row-bottom {
