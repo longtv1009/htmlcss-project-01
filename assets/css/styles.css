@@ -6,6 +6,11 @@
     --primary-color: #0f1b4c;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -107,7 +112,7 @@ a {
     flex-direction: column;
     position: relative;
     background: #e6f0ff;
-    height: 100vh;
+    height: calc(100vh - 90px);
 }
 
 .hero {
@@ -197,6 +202,7 @@ a {
 .guides {
     margin-top: 40px;
     padding: 79px 0;
+    scroll-margin-top: 40px;
 }
 
 .guides .sub-title {
@@ -376,6 +382,7 @@ a {
 .stats {
     margin-top: 75px;
     padding: 50px 0;
+    scroll-margin-top: 40px;
 }
 
 .stats .content {
@@ -526,6 +533,7 @@ a {
 /* ========= Subscription ========= */
 .subscription {
     margin-top: 90px;
+    scroll-margin-top: 100px;
 }
 
 .subscription .body {
