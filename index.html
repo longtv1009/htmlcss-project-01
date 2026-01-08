@@ -99,24 +99,46 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
-        <!-- Fixed Header -->
+        <!-- PC header -->
         <header class="fixed-header">
             <div class="content">
                 <nav class="navbar">
+                    <!-- Tablet/Mobile Menu -->
+                    <label for="menu-checkbox" class="toggle-menu">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
+                            />
+                        </svg>
+                    </label>
+
                     <!-- Logo -->
                     <a href="#">
-                        <img src="./assets/img/logo.svg" alt="Besnik." />
+                        <img
+                            class="logo"
+                            src="./assets/img/logo.svg"
+                            alt="Besnik."
+                        />
                     </a>
 
                     <!-- Navigation -->
-                    <ul>
+                    <ul id="pc-nav">
                         <li><a href="#">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#resource">Resource</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li class="show-on-mobile separate">
+                            <a href="#!">Sign in</a>
+                        </li>
+                        <li class="show-on-mobile"><a href="#!">Sign up</a></li>
                     </ul>
 
                     <!-- Action -->
@@ -126,6 +148,38 @@
                     </div>
                 </nav>
             </div>
+        </header>
+
+        <!-- Tablet/Mobile header -->
+        <header class="mobile-header">
+            <input
+                type="checkbox"
+                name=""
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden
+            />
+            <!-- Overlay -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+
+            <!-- Menu content -->
+            <div class="menu-drawer">
+                <!-- Logo -->
+                <a href="#">
+                    <img src="./assets/img/logo.svg" alt="Besnik." />
+                </a>
+
+                <!-- Navigation -->
+                <ul id="mobile-nav"></ul>
+            </div>
+
+            <script>
+                const pcNav = document.querySelector("#pc-nav");
+                const mobileNav = document.querySelector("#mobile-nav");
+
+                // Copy from PC nav to Mobile nav
+                mobileNav.innerHTML = pcNav.innerHTML;
+            </script>
         </header>
 
         <main>
@@ -174,7 +228,9 @@
                         <p class="desc">
                             More than 45,000+ companies trust besnik
                         </p>
-                        <p class="desc">5 Star Ratings (2k+ Review)</p>
+                        <p class="desc hide-on-mobile">
+                            5 Star Ratings (2k+ Review)
+                        </p>
                     </div>
                     <div class="images">
                         <a href="#!">
@@ -421,6 +477,11 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- View all -->
+                    <div class="view-all show-on-mobile">
+                        <a href="" class="btn">View All Properties </a>
                     </div>
                 </div>
             </div>

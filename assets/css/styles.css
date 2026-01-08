@@ -237,7 +237,7 @@ a {
 .list-guides {
     display: flex;
     justify-content: center;
-    gap: 140px;
+    column-gap: 140px;
     margin-top: 70px;
 }
 
@@ -314,9 +314,10 @@ a {
 }
 
 .featured .list-featured {
-    margin-top: 70px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-top: 70px;
 }
 
 .featured .featured-item {
@@ -587,7 +588,7 @@ a {
 }
 
 .footer .row-top {
-    gap: 185px;
+    column-gap: 185px;
 }
 
 .footer .heading {
